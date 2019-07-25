@@ -1,21 +1,40 @@
-pregunta 1: Para el primer escenario, con un argumento de 100 el programa se
-ejecuta en 1 segundo, con un argumento de 10000 se ejecuta en 1 segundo, con 
-un argumento de 10000000 1 segundo, con 100000000 2 segundos, con 1000000000
- 8 segundos, con 10000000000 11 segundos. Se demora dependiendo del argumento
- que se le asigne, con argumentos bajos se demora menos ya que la operacion de
- incremetar la hace rapido. Ya con argumentos muy grandes le toma mas a los
- hilos ejecutar la tarea.
+pregunta 1: La repuesta a este problema se soluciono copiando el codigo threads realizado anteriormente y tomando los tiempos
+de ejecucion con argumentos de diferentes tamanos consignados a continuacion:
+-Para el primer escenario:
+Argumento de 10000: se ejecuta en 1 segundo.
+Argumento de 10000000: se ejecuta en 1 segundo
+Argumento de 100000000: se ejecuta en 2 segundos.
+Argumento de 1000000000: se ejecuta en  8 segundos.
+Argumento de 10000000000: se ejecuta 11 segundos.
+Conclusion: Se demora dependiendo de la dimension del argumento que se le asigne, con argumentos bajos, 
+se demora menos ya que la operacion de incremetar la hace rapido. Ya con argumentos muy grandes le toma mas a los
+hilos ejecutar la tarea por eso de demora mas.
 
-Para el segundo escenario, con un argumento de 100 el programa se ejecuta en 
-un segundo, con 10000 1 segundo, con 1000000 se demoro 3 segundos, con 
-10000000 se demoro 11 segundos, con 100000000 se demoro 24 segundos.
+-Para el segundo escenario:
+Argumento de 100: se ejecuta en 1 segundo.
+Argumento de 10000: se ejecuta en 1 segundo.
+Argumento de 1000000: se ejecuta en 3 segundos.
+Argumento de 10000000: se ejecuta en 11 segundos.
+Argumento de 100000000: se ejecuta en 24 segundos.
+
+Conclusion: Al modificar la posicion de abrir y cerrar puerta, vemos que aumentan los tiempos de ejecucion se ven 
+afectados, debido a que en este escenario este arreglo de puerta esta encuentra dentro del for, por lo que se ve involucrado
+directamente en el incremento de la variable haciendo que se demore mas la ejecucion
  
+pregunta 2: Para la solucion de este problema se creo un mycommon.h como en
+clases anteriores para poder usar los hilos con la puerta, para evitar el 
+problema de concurrencia, se le adiciono al mycommon las operaciones de
+multiplicacion y division como una libreria.Luego se creo una variable global
+llamada v, se crearon los hilos y dos void a los que accederian cada hilo,
+el hilo 1 ingreso al void division el cual lo que hace es la division entre 
+z e y, se guarda en la variable v. El hilo 2 ingresa al void multiplicacion
+que lo que hace es multiplicar el valor de la division en v por una constante 
+x y lo guarda en v, luego imprime el valor.
 
-pregunta 2:
-
-pregunta 3: Al hacer el programa de ejemplo en el libro guía, vemos que al
-ejecutar, siempre se ejecuta primero el padre, luego el hijo. Por lo que 
-solo se le modificó los mensajes a mostrar.
+pregunta 3: Para la solucion de este problema se tomo el ejemplo del libro
+guia para la explicacion del wait(), lo que se hizo fue cambiar el wait de 
+posicion, se puso en el proceso hijo lo que lo obliga a esperar hasta que el 
+padre termine de ejecutar. 
 
 pregunta 4:
 

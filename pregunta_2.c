@@ -4,30 +4,35 @@
 #include "common_threads.h"
 #include "mycommon.h"
 
-volatile float v=0;
+volatile float v;
+    	pthread_mutex_t puerta;
 
-void *division(void *arg) {
-    int y=350, z=25;
-    v= z/y;
+void *Division(void *arg) {
+
+    cerrar_puerta(puerta);
+    float y= 350, z= 25;
+    v = division(z,y);
+    abrir_puerta(puerta);
     return NULL;
 }
 
 void *multiplicacion(void *arg) {
-    float m=0;
-    int x=1250;
-    m= x*v;
+
+    cerrar_puerta(puerta);
+    float x= 1250;
+    v = multi(x,v);
+    abrir_puerta(puerta);
     return NULL;
 }
 
 int main(int argc, char *argv[]) {
-
+    crear_puerta(puerta);
     pthread_t p1, p2;
-   
-    Pthread_create(&p1, NULL, division, NULL);
+    Pthread_create(&p1, NULL, Division, NULL);
     Pthread_create(&p2, NULL, multiplicacion, NULL);
     Pthread_join(p1, NULL);
     Pthread_join(p2, NULL);
-   
-    printf("v=  %f\n", v);
+    destruir_puerta(puerta);
+    printf("v =  %f\n", v);
     return 0;
 }

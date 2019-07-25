@@ -1,4 +1,15 @@
-pregunta 1:
+pregunta 1: Para el primer escenario, con un argumento de 100 el programa se
+ejecuta en 1 segundo, con un argumento de 10000 se ejecuta en 1 segundo, con 
+un argumento de 10000000 1 segundo, con 100000000 2 segundos, con 1000000000
+ 8 segundos, con 10000000000 11 segundos. Se demora dependiendo del argumento
+ que se le asigne, con argumentos bajos se demora menos ya que la operacion de
+ incremetar la hace rapido. Ya con argumentos muy grandes le toma mas a los
+ hilos ejecutar la tarea.
+
+Para el segundo escenario, con un argumento de 100 el programa se ejecuta en 
+un segundo, con 10000 1 segundo, con 1000000 se demoro 3 segundos, con 
+10000000 se demoro 11 segundos, con 100000000 se demoro 24 segundos.
+ 
 
 pregunta 2:
 

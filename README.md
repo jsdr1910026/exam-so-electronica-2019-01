@@ -52,4 +52,11 @@ pregunta 4:
   para finalmente pasar a DONE.
 
 
-pregunta 5:
+pregunta 5: La solucion de este problema se realizo en conjunto con el grupo
+de trabajo, ya que solo no se encontro la solucion, estos son los links guia
+que nos ayudaron a la implementacion de ejercicio: https://fresh2refresh.com/c-programming/c-strings/c-strtok-function/
+Teniendo en cuenta que fue el unico punto que se hizo en conjunto se deja a 
+criterio del profesor la decision sobre el punto. En la solucion lo que se
+hizo fue hacer un arreglo que nos recorriera las carpetas buscando el 
+argumento que se le paso, que en este caso es un ejecutable, dandonos asi la 
+direccion del ejecutable.
